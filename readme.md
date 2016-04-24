@@ -1,5 +1,5 @@
 #UFC meets ReactJS app
-
+(early development)
 
 ##Instructions
 0. git clone git@github.com:leviathan88/JasminePlayground.git ufc
