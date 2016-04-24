@@ -5,10 +5,11 @@ body {
 }
 
 .index img {
-  margin: 40px auto;
-  border-radius: 45%;
+  margin: 20px auto;
+  border-radius: 50%;
   background: #fff;
   display: block;
+  width: 150px;
 }
 
 .index .notice {
