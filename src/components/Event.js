@@ -27,8 +27,8 @@ class Event extends Component {
     return(
       <div className="event">
         <div className="event_details" onClick={this.toggleDetails.bind(this)}>
-          {this.props.arena} <p>date:   <Time value={this.props.event_date} format="YYYY/MM/DD" /> </p>
-
+          Arena: <strong>{this.props.arena}</strong>
+          <p>Date: <Time value={this.props.event_date} format="YYYY/MM/DD" /></p>
         </div>
         {eventDetails}
       </div>

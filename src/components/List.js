@@ -11,7 +11,7 @@ class List extends Component {
                     arena = {event.arena}/>
     });
     return(
-      <div class="list">
+      <div className="list">
         <h1>{this.props.title}</h1>
         {events}
       </div>
