@@ -89,3 +89,7 @@ ul {
 #vs {
   width: 55px;
 }
+
+.event_details {
+  cursor: pointer;;
+}
