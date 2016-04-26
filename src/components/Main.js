@@ -3,6 +3,7 @@ require('styles/App.css');
 require('bootstrap/dist/css/bootstrap.css');
 import React, {Component} from 'react';
 import List from './List';
+import Search from './Search';
 
 let react = 'https://assets.toptal.io/uploads/blog/category/logo/291/react.png';
 let name = 'UFC Spy';
@@ -32,12 +33,12 @@ class AppComponent extends Component {
 
         <div className="app row">
           <div className="col-xs-6">
-            <List id='ppv' title='PPV' events={this.props.events.filter((event)=> event.subtitle==='Live on Pay-Per-View')}/>
-            <List id='fs1' title='FS1 Shows' events={this.props.events.filter((event)=> event.subtitle==='FS1')}/>
+            <List title='PPV' events={this.props.events.filter((event)=> event.subtitle==='Live on Pay-Per-View')}/>
+            <List title='FS1 Shows' events={this.props.events.filter((event)=> event.subtitle==='FS1')}/>
           </div>
           <div className="col-xs-6">
-            <List id='fs1-live' title='FS1 Live Shows' events={this.props.events.filter((event)=> event.subtitle==='Live on FS1')}/>
-            <List id='fpass' title='Fight Pass Shows' events={this.props.events.filter((event)=> event.subtitle==='Live on UFC FIGHT PASS')}/>
+            <List title='FS1 Live Shows' events={this.props.events.filter((event)=> event.subtitle==='Live on FS1')}/>
+            <List title='Fight Pass Shows' events={this.props.events.filter((event)=> event.subtitle==='Live on UFC FIGHT PASS')}/>
           </div>
         </div>
       </div>
