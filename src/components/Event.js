@@ -27,7 +27,8 @@ class Event extends Component {
     return(
       <div className="event">
         <div className="event_details" onClick={this.toggleDetails.bind(this)}>
-          Arena: <strong>{this.props.arena}</strong>
+        <div className={this.state.showDetails ? "glyphicon glyphicon-chevron-up" : "glyphicon glyphicon-chevron-down" }>
+        </div>  Arena: <strong>{this.props.arena}</strong>
           <p>Date: <Time value={this.props.event_date} format="YYYY/MM/DD" /></p>
         </div>
         {eventDetails}
