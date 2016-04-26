@@ -17,9 +17,9 @@ class Event extends Component {
     let eventDetails;
     if(this.state.showDetails) {
       eventDetails = (
-        <div>
+        <div onClick={this.toggleDetails.bind(this)}>
           <div><img src={this.props.img}/></div>
-          <div className="event_details" >{this.props.desc}</div>
+          <div className="text-primary">{this.props.desc}</div>
         </div>
       );
     }
