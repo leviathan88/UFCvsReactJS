@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import Time from 'react-time'
 
 class Event extends Component {
@@ -36,5 +36,12 @@ class Event extends Component {
     );
   }
 }
+
+Event.propTypes = {
+  arena: PropTypes.string,
+  img: PropTypes.string,
+  event_date: PropTypes.instanceOf(Date),
+  desc: PropTypes.string
+};
 
 export default Event;

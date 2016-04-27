@@ -1,7 +1,7 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
 require('bootstrap/dist/css/bootstrap.css');
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import List from './List';
 import Search from './Search';
 
@@ -47,6 +47,10 @@ class AppComponent extends Component {
 }
 
 AppComponent.defaultProps = {
+};
+
+AppComponent.propTypes = {
+  events: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default AppComponent;
