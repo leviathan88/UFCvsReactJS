@@ -21,7 +21,7 @@ class List extends Component {
 
 List.propTypes = {
   title: PropTypes.string.isRequired,
-  cards: PropTypes.arrayOf(PropTypes.object)
+  events: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default List;
