@@ -5,7 +5,7 @@ import Time from 'react-time'
 let arenaPropType = (props, propName, componentName) => {
   if(props[propName]) {
     let value = props[propName];
-    if(value!=='string' || value.lengh > 80) {
+    if(value!=='string' || value.lengh > 180) {
       return new Error(
         `${propName} in ${componentName} is longer than 80 characters`
       );
