@@ -2,9 +2,8 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 require('bootstrap/dist/css/bootstrap.css');
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import List from './List';
-import Search from './Search';
 import Header from './Header';
 import Jumbo from './Jumbo';
 
@@ -33,7 +32,7 @@ class AppComponent extends Component {
             <List title='Fight Pass Shows' events={events.filter((event)=> event.subtitle==='Live on UFC FIGHT PASS')}/>
           </div>
         </div>
-        
+
       </div>
     );
   }
