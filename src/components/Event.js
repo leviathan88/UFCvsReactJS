@@ -1,6 +1,18 @@
 import React, {Component, PropTypes} from 'react';
 import Time from 'react-time'
 
+//our own propType
+let arenaPropType = (props, propName, componentName) => {
+  if(props[propName]) {
+    let value = props[propName];
+    if(value!=='string' || value.lengh > 80) {
+      return new Error(
+        `${propName} in ${componentName} is longer than 80 characters`
+      );
+    }
+  }
+}
+
 class Event extends Component {
   constructor() {
     super(...arguments);
@@ -38,7 +50,7 @@ class Event extends Component {
 }
 
 Event.propTypes = {
-  arena: PropTypes.string,
+  arena: arenaPropType,
   img: PropTypes.string,
   event_date: PropTypes.instanceOf(Date),
   desc: PropTypes.string
