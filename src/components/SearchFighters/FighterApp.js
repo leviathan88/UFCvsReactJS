@@ -2,8 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import SearchBar from './SearchBar';
 import FighterList from './FighterList';
 
-
-class SearchApp extends Component {
+class FighterApp extends Component {
 
   constructor() {
     super();
@@ -21,14 +20,14 @@ class SearchApp extends Component {
     return (
       <div>
         <SearchBar filterText={this.state.filterText} onUserInput={this.handleUserInput.bind(this)} />
-        <FighterList fighters={fighters} filterText={this.state.filterText} />
+        <FighterList fighters={this.props.fighters} filterText={this.state.filterText} />
       </div>
     );
   }
 }
 
-SearchApp.propTypes = {
+FighterApp.propTypes = {
   fighters: PropTypes.arrayOf(PropTypes.object)
 }
 
-export default SearchApp;
+export default FighterApp;

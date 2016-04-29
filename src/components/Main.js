@@ -31,7 +31,7 @@ class AppComponent extends Component {
             <List title='FS1 Live Shows' events={events.filter((event)=> event.subtitle==='Live on FS1')}/>
             <List title='Fight Pass Shows' events={events.filter((event)=> event.subtitle==='Live on UFC FIGHT PASS')}/>
           </div>
-        </div>
+        </div>        
       </div>
     );
   }

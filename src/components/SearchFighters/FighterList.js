@@ -5,15 +5,15 @@ class FighterList extends Component {
   render(){
 
     let filteredFighters = this.props.fighters.filter(
-      (fighter)=>fighter.name.indexOf(this.props.filterText) !== -1
+      (fighter)=>fighter.last_name.indexOf(this.props.filterText) !== -1
     );
 
     return(
       <ul>
         {filteredFighters.map(
-          (fighter) => <FighterItem key={fighter.email}
-                                    name={fighter.name}
-                                    email={fighter.email} />
+          (fighter) => <FighterItem first_name={fighter.first_name}
+                                    last_name={fighter.last_name}
+                                     />
         )}
       </ul>
     )

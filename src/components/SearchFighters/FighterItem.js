@@ -2,12 +2,12 @@ import React, {Component, PropTypes} from 'react';
 
 class FighterItem extends Component {
   render() {
-    return <li>{this.props.name} - {this.props.email}</li>
+    return <li>{this.props.last_name} - {this.props.first_name}</li>
   }
 }
 FighterItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired
+  last_name: PropTypes.string.isRequired,
+  first_name: PropTypes.string.isRequired
 }
 
 export default FighterItem;
