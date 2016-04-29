@@ -6,3 +6,6 @@
 1. cd ufc
 2. npm install
 3. npm start
+
+##Current look
+![alt tag](images/ufc.png)
