@@ -68,6 +68,7 @@
     "moment": "^2.13.0",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
+    "react-addons-update": "^15.0.1",
     "react-dom": "^15.0.0",
     "react-time": "^4.0.2",
     "whatwg-fetch": "^1.0.0"
