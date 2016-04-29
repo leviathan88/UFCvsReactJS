@@ -69,6 +69,7 @@
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "react-time": "^4.0.2"
+    "react-time": "^4.0.2",
+    "whatwg-fetch": "^1.0.0"
   }
 }

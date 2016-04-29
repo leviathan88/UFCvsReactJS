@@ -1,13 +1,13 @@
 import React, {Component, PropTypes} from 'react';
 
-class ContactItem extends Component {
+class FighterItem extends Component {
   render() {
     return <li>{this.props.name} - {this.props.email}</li>
   }
 }
-ContactItem.propTypes = {
+FighterItem.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired
 }
 
-export default ContactItem;
+export default FighterItem;
