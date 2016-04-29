@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import 'whatwg-fetch';
 import List from './List';
 
-const API_URL = './events.json';
-const API_HEADERS = {'Content-Type':'application/json'};
+const API_URL = 'http://ufc-data-api.ufc.com/api/v1/us/events';
+const API_HEADERS = {'Content-Type':'application/json', 'Authorization': 'any color blue'};
 
 class EventAppContainer extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class EventAppContainer extends Component {
   }
 
   componentDidMount(){
-    fetch(API_URL)
+    fetch(}
     .then((response) => response.json())
     .then((responseData) => {
       this.setState({events: responseData});
