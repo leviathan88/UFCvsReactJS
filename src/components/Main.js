@@ -5,6 +5,7 @@ require('bootstrap/dist/css/bootstrap.css');
 import React, {Component} from 'react';
 import Header from './Header';
 import Jumbo from './Jumbo';
+import Footer from './Footer';
 import EventAppContainer from './ListEvents/EventAppContainer';
 
 let react = 'https://assets.toptal.io/uploads/blog/category/logo/291/react.png';
@@ -19,6 +20,7 @@ class AppComponent extends Component {
         <Header name={name}/>
         <Jumbo react={react} ufc={ufc} vs={vs}/>
         <EventAppContainer />
+        <Footer />
       </div>
     );
   }
