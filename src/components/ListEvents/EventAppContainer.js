@@ -14,7 +14,7 @@ class EventAppContainer extends Component {
   }
 
   componentDidMount(){
-    fetch(}
+    fetch('./events.json')
     .then((response) => response.json())
     .then((responseData) => {
       this.setState({events: responseData});
