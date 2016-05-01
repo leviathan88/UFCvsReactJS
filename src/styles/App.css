@@ -1,4 +1,11 @@
 /* Base Application Styles */
+
+@keyframes pulsing-icons {
+  0% { transform: none; }
+  50% { transform: scale(1.2); }
+  100% { transform: none; }
+}
+
 html,body,#app {
   height:100%;
   margin: 0;
@@ -63,6 +70,11 @@ ul {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.versus2:hover {
+  animation: pulsing-icons .5s infinite;
+  transform-origin: center;
 }
 
 #images{
