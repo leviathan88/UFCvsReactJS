@@ -1,12 +1,13 @@
-import React, {Component} from 'react';
-import Container from './Container';
+import React, { Component } from 'react';
+import {render} from 'react-dom';
+import Container from './Container'
 
-class FightsApp extends Component {
-  render() {
-    return(
-      <Container/>
+class FightApp extends Component {
+  render(){
+    return (
+      <Container />
     );
   }
 }
 
-export default FightsApp;
+export default FightApp;
