@@ -20,13 +20,13 @@ let vs = 'https://s3.amazonaws.com/applause-devmktg/2015/12/02/5gs8428lyf_VS.png
 class AppComponent extends Component {
   constructor() {
     super(...arguments);
-    this.state = {
+    this.state= {
       route: window.location.hash.substr(1)
-    }
+    };
   }
 
-  componenetDidMount() {
-    window.addEventListener('hashchange', ()=> {
+  componentDidMount() {
+    window.addEventListener('hashchange', () => {
       this.setState({
         route: window.location.hash.substr(1)
       });
@@ -35,7 +35,7 @@ class AppComponent extends Component {
 
   render() {
     let Child;
-    case(this.state.route) {
+    switch(this.state.route) {
       case '/fights': Child=FightApp; break;
       case '/fighters': Child=FightersAppContainer; break;
       default: Child=EventAppContainer;
@@ -44,7 +44,7 @@ class AppComponent extends Component {
       <div className="container index">
         <Header name={name}/>
         <Jumbo react={react} ufc={ufc} vs={vs}/>
-        <EventAppContainer />
+        <Child />
         <Footer />
       </div>
     );
