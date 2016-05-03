@@ -19,9 +19,9 @@ class AppComponent extends Component {
       <div className="container index">
         <div className="header">
           <ul className="nav nav-pills pull-right">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/fighters">Fighters</Link></li>
-            <li><Link to="/fights">Fights</Link></li>
+            <li><Link to="/" activeClassName="active">Home</Link></li>
+            <li><Link to="/fighters" activeClassName="active">Fighters</Link></li>
+            <li><Link to="/fights" activeClassName="active">Fights</Link></li>
           </ul>
           <h3 className="text-muted">Welcome to {name}</h3>
       </div>

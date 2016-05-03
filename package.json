@@ -63,6 +63,7 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
+    "babel-polyfill": "^6.8.0",
     "bootstrap": "^3.3.6",
     "core-js": "^2.0.0",
     "history": "^2.1.1",

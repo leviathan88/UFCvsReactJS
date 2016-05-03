@@ -2,41 +2,23 @@ import React, { Component } from 'react';
 import 'whatwg-fetch';
 
 class FighterDetails extends Component {
-  constructor(){
-     super(...arguments);
-     this.state={
-       repository:{}
-     };
-   }
+  renderFighters() {
+      let fighter = this.props.fighters.find((fighter)=>fighter.id == this.props.params.id);
+      return(
+        <div>
+          <h2>{fighter.wins}</h2>
+          <p>jesam</p>
+        </div>
+      );
+    }
 
-  fetchData(id) {
-    fetch('./fighters.json')
-    .then((response) => response.json())
-    .then((responseData) => {
-      let fighterX = responseData.filter((fighter)=>fighter.id==id);
-      console.log(fighterX);
-      this.setState({fighter: fighterX});
-    })
-  }
-
-   componentDidMount(){
-     let fighter_id = this.props.params.id;
-     this.fetchData(fighter_id)
-   }
-
-   componentWillReceiveProps(nextProps){
-     let fighter_id= nextProps.params.id;
-     this.fetchData(fighter_id)
-   }
-
-  render() {
-
-    return(
-      <div>
-        <p>right said fred</p>
-      </div>
-    );
-  }
+    render() {
+        if(this.props.fighters.length > 0 ){
+          return this.renderFighters();
+        } else {
+          return <h4>Loading...</h4>;
+        }
+      }
 
 }
 
