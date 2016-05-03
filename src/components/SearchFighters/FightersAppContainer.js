@@ -23,7 +23,7 @@ class FightersAppContainer extends Component {
 
   render(){
     return (
-      <FighterApp fighters={this.state.fighters} />
+      <FighterApp fighters={this.state.fighters.filter((fighter)=>fighter.weight_class==='Heavyweight')} />
     );
   }
 }
