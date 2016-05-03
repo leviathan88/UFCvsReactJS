@@ -6,8 +6,8 @@ class FighterDetails extends Component {
       let fighter = this.props.fighters.find((fighter)=>fighter.id == this.props.params.id);
       return(
         <div>
-          <h2>{fighter.wins}</h2>
-          <p>jesam</p>
+          <h2>{fighter.first_name} {fighter.last_name}</h2>
+          <h4><mark>{fighter.wins} {fighter.losses} {fighter.draws}</mark></h4>          
         </div>
       );
     }

@@ -41,7 +41,7 @@ class FightersAppContainer extends Component {
     );
    return (
      <div>
-     <h1>Github Repos</h1>
+     <h1>Heavyweights</h1>
      <ul>
        {fighters}
      </ul>
