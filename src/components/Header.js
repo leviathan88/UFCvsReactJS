@@ -6,8 +6,8 @@ class Header extends Component {
       <div className="header">
         <ul className="nav nav-pills pull-right">
           <li claclassNamess="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#/fights">Fights</a></li>
+          <li><a href="#/fighters">Fighters</a></li>
         </ul>
         <h3 className="text-muted">Welcome to {this.props.name}</h3>
     </div>
