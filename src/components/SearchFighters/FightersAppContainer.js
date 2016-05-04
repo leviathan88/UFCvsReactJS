@@ -3,6 +3,13 @@ import 'whatwg-fetch';
 import FighterApp from './FighterApp';
 import { Link } from 'react-router';
 
+const listStyle = {
+  width: '33%',
+  float: 'left'
+}
+
+
+
 class FightersAppContainer extends Component {
   constructor(){
     super();
@@ -35,8 +42,14 @@ class FightersAppContainer extends Component {
 
   render() {
     let heavy = this.state.fighters.filter((fighter)=>fighter.weight_class==='Heavyweight');
-    let fighters = heavy.map((fighter) => (
-      <li key={fighter.id}>
+    let welter = this.state.fighters.filter((fighter)=>fighter.weight_class==='Welterweight');
+    let hFighters = heavy.map((fighter) => (
+      <li key={fighter.id} style={listStyle}>
+        <Link to={"/fighter/"+fighter.id}>{fighter.last_name}</Link>
+      </li>
+    ));
+    let wFighters = welter.map((fighter) => (
+      <li key={fighter.id} style={listStyle}>
         <Link to={"/fighter/"+fighter.id}>{fighter.last_name}</Link>
       </li>
     ));
@@ -45,12 +58,26 @@ class FightersAppContainer extends Component {
       { fighters: this.state.fighters }
     );
     return (
-      <div>
-      <h1>Heavyweights</h1>
-      <ul>
-        {fighters}
-      </ul>
-     {child}
+      <div className="container">
+      <h1>Heavyweight</h1>
+      <div className="row">
+        <div className="col-md-6">
+          <ul >
+            {hFighters}
+          </ul>
+        </div>
+        <div className="col-md-6">
+          {child}
+        </div>
+      </div>
+      <h1>Welterweight</h1>
+      <div className="row">
+        <div className="col-md-6">
+          <ul >
+            {wFighters}
+          </ul>
+        </div>
+      </div>
      </div>
     );
   }
