@@ -4,10 +4,12 @@ import FighterApp from './FighterApp';
 import { Link } from 'react-router';
 
 const listStyle = {
-  width: '33%',
+  width: '22%',
   float: 'left'
 }
-
+const colorChampion = {
+  color: 'gold'
+}
 
 
 class FightersAppContainer extends Component {
@@ -42,13 +44,13 @@ class FightersAppContainer extends Component {
 
   render() {
     let heavy = this.state.fighters.filter((fighter)=>fighter.weight_class==='Heavyweight');
-    let welter = this.state.fighters.filter((fighter)=>fighter.weight_class==='Welterweight');
+    let middle = this.state.fighters.filter((fighter)=>fighter.weight_class==='Middleweight');
     let hFighters = heavy.map((fighter) => (
       <li key={fighter.id} style={listStyle}>
         <Link to={"/fighter/"+fighter.id}>{fighter.last_name}</Link>
       </li>
     ));
-    let wFighters = welter.map((fighter) => (
+    let mFighters = middle.map((fighter) => (
       <li key={fighter.id} style={listStyle}>
         <Link to={"/fighter/"+fighter.id}>{fighter.last_name}</Link>
       </li>
@@ -70,11 +72,11 @@ class FightersAppContainer extends Component {
           {child}
         </div>
       </div>
-      <h1>Welterweight</h1>
+      <h1>Middleweight</h1>
       <div className="row">
         <div className="col-md-6">
           <ul >
-            {wFighters}
+            {mFighters}
           </ul>
         </div>
       </div>
