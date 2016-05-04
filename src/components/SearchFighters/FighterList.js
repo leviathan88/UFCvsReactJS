@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import { Link } from 'react-router';
-
+import FighterItem from './FighterItem';
 
 class FighterList extends Component {
   render(){
@@ -9,22 +8,14 @@ class FighterList extends Component {
       (fighter)=>fighter.last_name.indexOf(this.props.filterText) !== -1
     );
 
-    let fighters = filteredFighters.map((fighter)=> (
-      <li key={fighter.id}>
-        <Link to={"/fighter/"+fighter.id}>{fighter.last_name} - {fighter.first_name}</Link>
-      </li>
-    ));
-
-    let child = this.props.children && React.cloneElement(this.props.children,
-     { fighters: this.props.fighters }
-   );
-
     return(
-      <div>
-        <h2>Fighters</h2>
-        <ul>{fighters}</ul>
-        {child}
-      </div>
+      <ul>
+        {filteredFighters.map(
+          (fighter) => <FighterItem first_name={fighter.first_name}
+                                    last_name={fighter.last_name}
+                                     />
+        )}
+      </ul>
     )
   }
 }
