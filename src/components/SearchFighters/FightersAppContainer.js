@@ -35,25 +35,25 @@ class FightersAppContainer extends Component {
 
   render() {
     let heavy = this.state.fighters.filter((fighter)=>fighter.weight_class==='Heavyweight');
-   let fighters = heavy.map((fighter) => (
-     <li key={fighter.id}>
-       <Link to={"/fighter/"+fighter.id}>{fighter.last_name}</Link>
-     </li>
-   ));
+    let fighters = heavy.map((fighter) => (
+      <li key={fighter.id}>
+        <Link to={"/fighter/"+fighter.id}>{fighter.last_name}</Link>
+      </li>
+    ));
 
-   let child = this.props.children && React.cloneElement(this.props.children,
+    let child = this.props.children && React.cloneElement(this.props.children,
       { fighters: this.state.fighters }
     );
-   return (
-     <div>
-     <h1>Heavyweights</h1>
-     <ul>
-       {fighters}
-     </ul>
+    return (
+      <div>
+      <h1>Heavyweights</h1>
+      <ul>
+        {fighters}
+      </ul>
      {child}
      </div>
-   );
- }
+    );
+  }
 }
 
 export default FightersAppContainer;
