@@ -13,12 +13,17 @@ class FightersAppContainer extends Component {
 
   componentDidMount(){
     fetch('./fighters.json')
-    .then((response) => response.json())
+    .then((response) => {
+      if(response.ok)
+        return response.json();
+      else
+         throw new Error("Server response wasn’t OK");
+    })
     .then((responseData) => {
       this.setState({fighters: responseData});
     })
     .catch((error) => {
-      console.log('Error fetching and parsing data', error);
+      this.props.history.pushState(null,'/error');
     });
   }
 
