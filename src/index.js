@@ -1,7 +1,7 @@
 import 'core-js/fn/object/assign';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, useRouterHistory  } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 
 import App from './components/Main';
